@@ -1,0 +1,6 @@
+# Permanent Storage
+storage
+
+# Bulid Time
+node_modules
+.bundle
