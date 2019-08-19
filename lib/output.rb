@@ -17,14 +17,16 @@ class Output
 
   private
   def organise(data)
-    # TODO
+    expected = Hash.new {|k,v| k[v] = []}
+    data.each {|article| expected[article[:category]] << article[:title]}
+    puts expected
+  end
     # Using the data argument, organise the articles by category and return
     # a hash where the keys are the categories and the values are
     # arrays that contain each article of that category. Example:
     # {
-    #    "Cricket" => ["'Quite incredible' - Roy loses shoe"],
+    #    "Cricket" => ["Quite incredible' - Roy loses shoe"],
     #    "Boxing" => ["Wait for facts before judging Whyte - Hearn",
     #                 "Some more boxing news I am creating"]
     #  }
-  end
 end

@@ -1,4 +1,8 @@
 require 'spec_helper'
+require 'fetch'
+require 'output'
+require 'run'
+require 'scraper'
 
 RSpec.describe Scraper do
   it 'returns a hash when #data is called' do
