@@ -4,9 +4,17 @@ require_relative 'fetch'
 class Scraper
   def initialize
     @url = 'https://www.bbc.co.uk/sport'
+    @fetch = fetch
   end
 
   def data
+    array =  []
+    @fetch.each do |article|
+      array << { title: title(article), category: category(article) }
+      # puts category(article)
+    end
+    return array
+
     # TODO
     # take the response from #fetch and return an array of maps containing
     # a title key and a category key. Use the #title and #category methods

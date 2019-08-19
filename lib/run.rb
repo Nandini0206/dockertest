@@ -1,3 +1,2 @@
-# require_relative 'output'
-# Output.new.print
-puts "hello"
+require_relative 'output'
+Output.new.print

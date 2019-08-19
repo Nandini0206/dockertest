@@ -19,7 +19,7 @@ class Output
   def organise(data)
     expected = Hash.new {|k,v| k[v] = []}
     data.each {|article| expected[article[:category]] << article[:title]}
-    puts expected
+    return expected
   end
     # Using the data argument, organise the articles by category and return
     # a hash where the keys are the categories and the values are
