@@ -3,7 +3,8 @@
 
 FROM ruby:2.5
 
-RUN bundle config --global frozen 1
+# RUN bundle config --global frozen 1
+RUN gem install bundler
 
 WORKDIR /usr/src/app
 
@@ -12,4 +13,4 @@ RUN bundle install
 
 COPY . .
 
-CMD ["./your-daemon-or-script.rb"]
+CMD ["ruby", "./lib/run.rb"]
