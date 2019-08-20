@@ -9,19 +9,16 @@ class Scraper
 
   def data
     array =  []
-    @fetch.each do |article|
+    @fetch.each do |article|f
       array << { title: title(article), category: category(article) }
-      # puts category(article)
     end
     return array
-
-    # TODO
+  end
     # take the response from #fetch and return an array of maps containing
     # a title key and a category key. Use the #title and #category methods
     # Example:
     # [{category: "Cricket", title: "'Quite incredible' - Roy loses shoe"},
     #  {category: "Boxing", title: "Wait for facts before judging Whyte - Hearn"}]
-  end
 
   private
   def fetch

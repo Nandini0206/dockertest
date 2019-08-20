@@ -3,7 +3,6 @@
 
 FROM ruby:2.5
 
-# RUN bundle config --global frozen 1
 RUN gem install bundler
 
 WORKDIR /usr/src/app
